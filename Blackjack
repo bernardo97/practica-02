@@ -1,0 +1,53 @@
+#include <stdlib.h>
+#include <time.h>
+ 
+int main()
+{
+    int carta, i,vect[5],puntos=0,punt=0;
+    char otra,s,S,N,n;
+    srand(time(NULL));
+    
+	printf("\t\tBIENVENIDO AL CASINO ROYALE\n");
+    for(i= 1; i <= 5; i++)
+    {
+         vect[i]= 1 + rand() % (12 - 1);
+    }
+    
+	  printf("Repartiendo cartas\n");
+    printf("\nTus cartas son: [%d],[%d]\n",vect[1],vect[2]);
+    if(puntos<21){
+		printf("Puedes pedir otra carta\n");
+		printf("Quieres una? s-si n-no\t");
+		scanf("%c",&otra);
+		getchar();
+		if(otra==n || otra==N){
+			printf("Cuenta tus cartas\n");
+			puntos=vect[1]+vect[2];
+		}
+	if(otra==s || otra==S){
+	for(i=1; i <= 5; i++){
+         vect[i]= 1 + rand() % (12 - 1);
+    		}
+    printf("Tu carta es: [%d]\n",vect[3]);
+		}
+		punt+=puntos+vect[3];
+    printf("Tus puntos son: %d",punt);
+	}
+	printf("Tu puntaje es: %d\n",punt);
+	if(punt==21){
+		printf("GANASTE\n");
+	}
+	if(punt>21){
+		printf("Perdiste\n");
+	if(puntos==21){
+		printf("Ya ganaste Felicidades!!\n");
+		printf("Tu puntaje es: %d\n",puntos);
+	}
+	if(puntos>21){
+		printf("Perdiste");
+		printf("Tu puntaje es: %d\n",puntos);
+	}
+	
+    return 0;
+}
+	
